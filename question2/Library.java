@@ -16,12 +16,12 @@ public class Library {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("CustomerPU");
 		EntityManager entitymanager = emf.createEntityManager();
 		Address add = new Address();
-		add.setCustomerAddress("23 Baker street, opposite to Mihindar hills");
+		add.setCustomerAddress("23 Rajpur Road");
 		
 		
 		Customer custo = new Customer();
-	    custo.setCustomerName("Ayush Srinivas");
-	    custo.setCustomerEmail("kerothinamarden189@gmail.com");
+	    custo.setCustomerName("Shivam");
+	    custo.setCustomerEmail("s123@gmail.com");
 	    custo.setCustomerAddress(add);
 		
 		entitymanager.getTransaction().begin();
@@ -29,7 +29,7 @@ public class Library {
 		entitymanager.flush();
 		entitymanager.getTransaction().commit();
 		
-		Customer mycustomer = entitymanager.find(Customer.class, "Ayush Srinivas");
+		Customer mycustomer = entitymanager.find(Customer.class, "Shivam");
 		System.out.println(mycustomer.getCustomerName());
 		System.out.println(mycustomer.getCustomerEmail());
 		System.out.println(mycustomer.getCustomerAddress());
