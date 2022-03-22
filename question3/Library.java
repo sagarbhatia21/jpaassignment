@@ -18,15 +18,15 @@ public class Library {
 		EntityManager entitymanager = emf.createEntityManager();
 		
 		PassengerId pid = new PassengerId();
-		pid.setPassengerEmail("kidharvinodh198@gmail.com");
-		pid.setPassengerMobile(9283391839l);
+		pid.setPassengerEmail("abc@gmail.com");
+		pid.setPassengerMobile(1234567890);
 		
 		Passenger pass = new Passenger();
 		pass.setPassengerEmail(pid.getPassengerEmail());
 		pass.setPassengerMobile(pid.getPassengerMobile());
-		pass.setPassengerName("Vinodh Kumar");
-		pass.setSource("Tanuku");
-		pass.setDestination("Samalarkot");
+		pass.setPassengerName("Sagar Bhatia");
+		pass.setSource("Delhi");
+		pass.setDestination("Agra");
 		
 		entitymanager.getTransaction().begin();
 		entitymanager.persist(pass);
