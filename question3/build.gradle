@@ -27,7 +27,5 @@ implementation group: 'org.hibernate', name: 'hibernate-entitymanager', version:
     
     // https://mvnrepository.com/artifact/org.postgresql/postgresql
 implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.23'
-    
-compile 'org.slf4j:slf4j-api:1.7.24'
-compile 'org.slf4j:slf4j-simple:1.7.24'
+
 }
